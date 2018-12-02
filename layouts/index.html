@@ -1,25 +1,83 @@
 {{ partial "header.html" . }}
 
-{{ $paginator := .Paginate (where .Data.Pages "Type" "work") }}
+<body>
+  <div class="container">
+    <div class="container__sidebar fl w-third">
+      <div class="sidebar">
+        <h6 class="sidebar__title">
+          <a href="/">{{ .Site.Data.settings.name }}</a>
+        </h6>
 
-<div class="showcase is-loading" {{ if .Paginator.HasNext }}data-next-url="{{ .Paginator.Next.URL }}"{{ end }}>
-  {{ range $paginator.Pages }}
-    <div class="showcase__item">
-      <figure class="card">
-        <a href="{{ .Permalink }}" class="card__image">
-          <img src="{{ .Params.coverimage }}">
-        </a>
-        <figcaption class="card__caption">
-          <h6 class="card__title">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </h6>
-          <div class="card__description">
-            <p>{{ .Params.excerpt }}</p>
-          </div>
-        </figcaption>
-      </figure>
+        <div class="sidebar__intro">
+          {{ .Site.Data.settings.intro | markdownify }}
+        </div>
+
+        <ul class="sidebar__menu">
+          {{ $currentNode := . }}
+          {{ range .Site.Menus.main }}
+            <li{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} class="is-active"{{end}}>
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        </ul>
+
+        <p class="sidebar__social">
+          {{ range .Site.Data.settings.socialProfiles }}
+            <a href="{{ .url }}" class="social social--{{ .type }}"></a>
+          {{ end }}
+        </p>
+
+        <div class="sidebar__copyright">
+          {{ .Site.Data.settings.copyright }}
+        </div>
+      </div>
     </div>
-  {{ end }}
-</div>
+    <div class="container__body fl w-two-thirds">
+      <div class="container__mobile-header">
+        <div class="mobile-header">
+          <div class="mobile-header__menu">
+            <a href="#" class="hamburger"></a>
+          </div>
+          <div class="mobile-header__logo">
+            <a href="/index.html">{{ .Site.Data.settings.name }}</a>
+          </div>
+        </div>
+      </div>
 
-{{ partial "footer.html" . }}
+      {{ $paginator := .Paginate (where .Data.Pages "Type" "work") }}
+
+      <div class="showcase" {{ if .Paginator.HasNext }}data-next-url="{{ .Paginator.Next.URL }}"{{ end }}>
+        {{ range $paginator.Pages }}
+          <div class="showcase__item">
+            <figure class="card">
+              <a href="{{ .Permalink }}" class="card__image">
+                <img src="{{ .Params.coverimage }}">
+              </a>
+              <figcaption class="card__caption">
+                <h6 class="card__title">
+                  <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h6>
+                <div class="card__description">
+                  <p>{{ .Params.excerpt }}</p>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        {{ end }}
+      </div>
+
+      <div class="mw8 center">
+        <nav class="cf pa3 pa4-ns" data-name="pagination-next-prev">
+          {{ if .Paginator.HasPrev }}
+            <a class="fl dib link dim black f6 f5-ns b pa2" href="{{ .Paginator.Prev.URL }}" title="Previous">&larr; Previous</a>
+          {{ end }}
+          {{ if .Paginator.HasNext }}
+          <a class="fr dib link dim black f6 f5-ns b pa2" href="{{ .Paginator.Next.URL }}" title="Next">Next &rarr;</a>
+          {{ end }}
+        </nav>
+      </div>
+    </div>
+  </div>
+  {{ partial "footer.html" . }}
+  </body>
+</html>
