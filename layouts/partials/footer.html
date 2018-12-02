@@ -1,4 +1,21 @@
 
+  <footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+    <small class="f6 db tc">{{ .Site.Data.settings.copyright }}</small>
+    <div class="tc mt3">
+      {{ range .Site.Data.settings.socialProfiles }}
+        <a href="{{ .url }}" class="social social--{{ .type }}"></a>
+      {{ end }}
+    </div>
+    <div class="tc mt3">
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.main }}
+          <a class="f6 dib ph2 link mid-gray dim" href="{{ .URL }}" title="{{ .Name }}"
+            >{{ .Name }}</a
+          >
+        {{ end }}
+    </div>
+  </footer>
+
   <script src="/assets/all.js"></script>
   {{ if eq .Site.Params.env "development" }}
     <script src="http://localhost:5678/livereload.js"></script>
