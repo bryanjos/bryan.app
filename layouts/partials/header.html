@@ -1,4 +1,6 @@
 
+<!DOCTYPE html>
+<html lang="<%= settings.language %>">
 <head>
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta charset="utf-8">
@@ -13,3 +15,5 @@
     {{ .Site.Data.settings.seoMetaTags | safeHTML }}
   {{ end }}
 </head>
+<body>
+  {{partial "nav.html" .}}

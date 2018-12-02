@@ -5,14 +5,10 @@
     <h1 class="sheet__title">{{ .Title }}</h1>
     <p class="sheet__lead">{{ .Params.excerpt }}</p>
     <div class="sheet__gallery">
-      <img src="{{ .Params.photo }}" />
+      {{ if .Params.photo }} <img src="{{ .Params.photo }}" /> {{ end }}
     </div>
-    <div class="sheet__body">
-      {{ .Content }}
-    </div>
+    <div class="sheet__body">{{ .Content }}</div>
   </div>
 </article>
 
 {{ partial "footer.html" . }}
-
-

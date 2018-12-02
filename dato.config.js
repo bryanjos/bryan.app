@@ -1,4 +1,4 @@
-const htmlTag = require('html-tag');
+const htmlTag = require('html-tag')
 
 // This function helps transforming structures like:
 //
@@ -8,11 +8,12 @@ const htmlTag = require('html-tag');
 //
 // <meta name="description" content="foobar" />
 
-const toHtml = (tags) => (
-  tags.map(({ tagName, attributes, content }) => (
-    htmlTag(tagName, attributes, content)
-  )).join("")
-);
+const toHtml = tags =>
+  tags
+    .map(({tagName, attributes, content}) =>
+      htmlTag(tagName, attributes, content)
+    )
+    .join('')
 
 // Arguments that will receive the mapping function:
 //
@@ -29,15 +30,14 @@ const toHtml = (tags) => (
 // https://github.com/datocms/js-datocms-client/blob/master/docs/dato-cli.md
 
 module.exports = (dato, root, i18n) => {
-
   // Add to the existing Hugo config files some properties coming from data
   // stored on DatoCMS
-  ['config.dev.toml', 'config.prod.toml'].forEach(file => {
+  ;['config.dev.toml', 'config.prod.toml'].forEach(file => {
     root.addToDataFile(file, 'toml', {
       title: dato.site.globalSeo.siteName,
-      languageCode: i18n.locale
-    });
-  });
+      languageCode: i18n.locale,
+    })
+  })
 
   // Create a YAML data file to store global data about the site
   root.createDataFile('data/settings.yml', 'yaml', {
@@ -50,11 +50,11 @@ module.exports = (dato, root, i18n) => {
       return {
         type: profile.profileType.toLowerCase().replace(/ +/, '-'),
         url: profile.url,
-      };
+      }
     }),
     faviconMetaTags: toHtml(dato.site.faviconMetaTags),
-    seoMetaTags: toHtml(dato.home.seoMetaTags)
-  });
+    seoMetaTags: toHtml(dato.home.seoMetaTags),
+  })
 
   // Create a markdown file with content coming from the `about_page` item
   // type stored in DatoCMS
@@ -62,12 +62,14 @@ module.exports = (dato, root, i18n) => {
     frontmatter: {
       title: dato.aboutPage.title,
       subtitle: dato.aboutPage.subtitle,
-      photo: dato.aboutPage.photo.url({ w: 800, fm: 'jpg', auto: 'compress' }),
+      photo: dato.aboutPage.photo
+        ? dato.aboutPage.photo.url({w: 800, fm: 'jpg', auto: 'compress'})
+        : null,
       seoMetaTags: toHtml(dato.aboutPage.seoMetaTags),
-      menu: { main: { weight: 100 } }
+      menu: {main: {weight: 100}},
     },
-    content: dato.aboutPage.bio
-  });
+    content: dato.aboutPage.bio,
+  })
 
   // Create a `work` directory (or empty it if already exists)...
   root.directory('content/work', dir => {
@@ -77,19 +79,32 @@ module.exports = (dato, root, i18n) => {
       dir.createPost(`${work.slug}.md`, 'yaml', {
         frontmatter: {
           title: work.title,
-          coverImage: work.coverImage.url({ w: 450, fm: 'jpg', auto: 'compress' }),
-          image: work.coverImage.url({ fm: 'jpg', auto: 'compress' }),
-          detailImage: work.coverImage.url({ w: 600, fm: 'jpg', auto: 'compress' }),
+          coverImage: work.coverImage
+            ? work.coverImage.url({
+                w: 450,
+                fm: 'jpg',
+                auto: 'compress',
+              })
+            : null,
+          image: work.coverImage
+            ? work.coverImage.url({fm: 'jpg', auto: 'compress'})
+            : null,
+          detailImage: work.coverImage
+            ? work.coverImage.url({
+                w: 600,
+                fm: 'jpg',
+                auto: 'compress',
+              })
+            : null,
           excerpt: work.excerpt,
           seoMetaTags: toHtml(work.seoMetaTags),
           extraImages: work.gallery.map(item =>
-            item.url({ h: 300, fm: 'jpg', auto: 'compress' })
+            item.url({h: 300, fm: 'jpg', auto: 'compress'})
           ),
           weight: index,
         },
-        content: work.description
-      });
-    });
-  });
-};
-
+        content: work.description,
+      })
+    })
+  })
+}

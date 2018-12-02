@@ -1,32 +1,16 @@
 {{ partial "header.html" . }}
 
-<article class="sheet">
-  <div class="sheet__inner">
-    <h1 class="sheet__title">{{ .Title }}</h1>
-    <p class="sheet__lead">{{ .Params.excerpt }}</p>
-    <div class="sheet__slider">
-      <div class="slider js_slider">
-        <div class="slider__frame js_frame">
-          <ul class="slider__slides js_slides">
-            {{ range .Params.extraimages }}
-              <li class="slider__slide js_slide">
-                <img src="{{ . }}">
-              </li>
-            {{ end }}
-          </ul>
-        </div>
-        <span class="slider__prev js_prev"></span>
-        <span class="slider__next js_next"></span>
-      </div>
+<article>
+  <header class="bg-gold sans-serif">
+    <div class="mw9 center pa4 pt5-ns ph7-l">
+      <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
+        <span class="bg-black-90 lh-copy white pa1 tracked-tight">
+          {{ .Title }}
+        </span>
+      </h3>
     </div>
-    <div class="sheet__body">
-      {{ .Content }}
-    </div>
-    <div class="sheet__gallery">
-      <img src="{{ .Params.detailimage }}" />
-    </div>
-  </div>
+  </header>
+  <div class="pa4 ph7-l georgia mw9-l center">{{.Content}}</div>
 </article>
 
 {{ partial "footer.html" . }}
-
