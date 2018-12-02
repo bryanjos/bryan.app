@@ -1,0 +1,13 @@
+<nav class="dt w-100 border-box pa3 ph5-ns">
+  <a class="dtc v-mid dark-gray link dim w-25" href="#" title="Home">
+    {{ .Site.Data.settings.name }}
+  </a>
+  <div class="dtc v-mid w-75 tr">
+    {{ $currentNode := . }}
+    {{ range .Site.Menus.main }}
+      <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} is-active {{end}}" href="{{ .URL }}" title="{{ .Name }}"
+        >{{ .Name }}</a
+      >
+    {{ end }}
+  </div>
+</nav>
