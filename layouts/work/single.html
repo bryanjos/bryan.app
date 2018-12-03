@@ -1,16 +1,8 @@
 {{ partial "header.html" . }}
 
-<article>
-  <header class="bg-gold sans-serif">
-    <div class="mw9 center pa4 pt5-ns ph7-l">
-      <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
-        <span class="bg-black-90 lh-copy white pa1 tracked-tight">
-          {{ .Title }}
-        </span>
-      </h3>
-    </div>
-  </header>
-  <div class="pa4 ph7-l georgia mw9-l center">{{.Content}}</div>
+<article class="pa3 pa5-ns">
+  <h1 class="f3 f1-m f-headline-l">{{ .Title }}</h1>
+  <div class="measure lh-copy">{{ .Content }}</div>
 </article>
 
 {{ partial "footer.html" . }}
