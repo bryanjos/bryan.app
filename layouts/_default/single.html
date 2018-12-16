@@ -1,14 +1,8 @@
 {{ partial "header.html" . }}
 
 <article class="sheet">
-  <div class="sheet__inner">
-    <h1 class="sheet__title">{{ .Title }}</h1>
-    <p class="sheet__lead">{{ .Params.excerpt }}</p>
-    <div class="sheet__gallery">
-      {{ if .Params.photo }} <img src="{{ .Params.photo }}" /> {{ end }}
-    </div>
-    <div class="sheet__body">{{ .Content }}</div>
-  </div>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
 </article>
 
 {{ partial "footer.html" . }}
