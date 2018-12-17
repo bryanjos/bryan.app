@@ -3,7 +3,7 @@
     <small class="f6 db tc">{{ .Site.Data.settings.copyright }}</small>
     <div class="tc mt3">
       {{ range .Site.Data.settings.socialProfiles }}
-        <a href="{{ .url }}" class="social social--{{ .type }}"></a>
+        <a href="{{ .url }}" class="social social--{{ .type }}" title="{{ .type }}"></a>
       {{ end }}
     </div>
     <div class="tc mt3">
