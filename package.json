@@ -17,6 +17,7 @@
   "dependencies": {
     "imagesloaded": "^4.1.1",
     "lory.js": "^2.2.1",
+    "luxon": "^1.8.2",
     "masonry-layout": "^4.1.1",
     "scroll-lazy": "^1.0.3"
   },

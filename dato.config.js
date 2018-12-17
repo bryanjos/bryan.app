@@ -1,4 +1,5 @@
 const htmlTag = require('html-tag')
+const {DateTime} = require('luxon')
 
 // This function helps transforming structures like:
 //
@@ -79,6 +80,7 @@ module.exports = (dato, root, i18n) => {
       dir.createPost(`${work.slug}.md`, 'yaml', {
         frontmatter: {
           title: work.title,
+          date: work.createdAt,
           coverImage: work.coverImage
             ? work.coverImage.url({
                 w: 450,
