@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "imagesloaded": "^4.1.1",
-    "lory.js": "^2.2.1",
+    "lory.js": "^2.5.3",
     "luxon": "^1.8.2",
     "masonry-layout": "^4.1.1",
     "reason-react": "^0.5.3",
