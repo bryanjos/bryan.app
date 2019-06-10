@@ -22,7 +22,7 @@
     "lory.js": "^2.5.3",
     "luxon": "^1.8.2",
     "masonry-layout": "^4.1.1",
-    "reason-react": "^0.5.3",
+    "reason-react": "^0.7.0",
     "scroll-lazy": "^1.0.3"
   },
   "devDependencies": {
