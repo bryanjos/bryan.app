@@ -22,7 +22,7 @@
     "scroll-lazy": "^1.0.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
+    "@babel/core": "^7.5.5",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.4.5",
     "autoprefixer": "^9.6.0",
