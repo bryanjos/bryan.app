@@ -4,11 +4,22 @@
 
   --main-light-bg-color: #FFFFFF;
   --main-light-color: #001F3F;
+
+  --scale-3: 0.422rem;
+  --scale-2: 0.563rem;
+  --scale-1: 0.75rem;
+  --scale0: 1rem;
+  --scale1: 1.33rem;
+  --scale2: 1.77rem;
+  --scale3: 2.369rem;
+  --scale3: 3.157rem;
+  --scale3: 3.157rem;
+  --scale4: 4.209rem;
 }
 
-html,
-body {
+html {
   font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
 }
 
 body {
@@ -20,6 +31,33 @@ body,
 a {
   background-color: var(--main-dark-bg-color);
   color: var(--main-dark-color);
+}
+
+h1 {
+  font-size: var(--scale4);
+}
+
+h2 {
+  font-size: var(--scale3);
+}
+
+h3 {
+  font-size: var(--scale2);
+}
+
+h4 {
+  font-size: var(--scale1);
+}
+
+h5 {
+  font-size: var(--scale0);
+}
+
+small,
+aside,
+.text_small,
+.small {
+  font-size: var(--scale-1);
 }
 
 @media (prefers-color-scheme: light) {
@@ -61,5 +99,20 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  text-align: center;
+}
+
+.post-list {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.post-list article {
+  margin-bottom: 5rem;
+}
+
+article {
+  margin: 0 auto;
+  max-width: 1280px;
   text-align: center;
 }

@@ -3,13 +3,13 @@
 <body>
   {{ partial "header.html"  . }}
 
-  <section id="wrapper" class="post">
+  <main>
     <article>
       <header>
-        <h1>
+        <h2>
           {{ .Title }}
-        </h1>
-        <h2 class="headline">
+        </h2>
+        <h5 class="headline">
           {{ .Date.Format "Jan 2, 2006 15:04" }}
           · {{ if lt 1 .WordCount }}{{ .WordCount }} words{{ else }}{{ .WordCount }} word{{ end }}
           · {{ .ReadingTime }} minute read
@@ -22,7 +22,7 @@
             {{ end }}
             {{ end}}
           </span>
-        </h2>
+        </h5>
       </header>
       {{ if .Site.Params.enableToc }}
       {{ if .TableOfContents }}
@@ -37,7 +37,7 @@
     </article>
 
     {{ partial "footer.html" . }}
-  </section>
+  </main>
 
   {{ partial "js.html" . }}
 </body>
