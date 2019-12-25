@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:hugo": "NODE_ENV=production hugo --config config.toml",
+    "build": "npm run build:hugo",
+    "start:hugo": "hugo -w --config config.toml",
+    "start": "npm run start:hugo"
   },
   "repository": {
     "type": "git",

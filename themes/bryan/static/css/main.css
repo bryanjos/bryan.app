@@ -1,0 +1,65 @@
+:root {
+  --main-dark-bg-color: #111111;
+  --main-dark-color: #7FDBFF;
+
+  --main-light-bg-color: #FFFFFF;
+  --main-light-color: #001F3F;
+}
+
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+body,
+a {
+  background-color: var(--main-dark-bg-color);
+  color: var(--main-dark-color);
+}
+
+@media (prefers-color-scheme: light) {
+
+  body,
+  a {
+    background-color: var(--main-light-bg-color);
+    color: var(--main-light-color);
+  }
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+header nav a {
+  padding: 0.5rem;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile h1 {
+  text-align: center;
+}
+
+.profile img {
+  width: 70%;
+  border-radius: 50%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}

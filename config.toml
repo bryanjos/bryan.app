@@ -2,7 +2,7 @@
 baseURL = "http://bryan.app/"
 languageCode = "en-us"
 title = "Bryan's Roar"
-theme = "hugo-theme-cactus-plus"
+theme = "bryan"
 googleAnalytics = "your_google_analytics_id"
 # Set the value to true if your site include CJK (Chinese, Japanese, and Korean languages) characters
 hasCJKLanguage = false
