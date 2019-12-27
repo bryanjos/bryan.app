@@ -10,9 +10,6 @@
           {{ .Title }}
         </h2>
         <h5 class="headline">
-          {{ .Date.Format "Jan 2, 2006 15:04" }}
-          · {{ if lt 1 .WordCount }}{{ .WordCount }} words{{ else }}{{ .WordCount }} word{{ end }}
-          · {{ .ReadingTime }} minute read
           <span class="tags">
             {{ with .Params.tags }}
             {{ if ge (len .) 1 }}
@@ -24,13 +21,6 @@
           </span>
         </h5>
       </header>
-      {{ if .Site.Params.enableToc }}
-      {{ if .TableOfContents }}
-      <div id="toc">
-        {{ .TableOfContents }}
-      </div>
-      {{ end }}
-      {{ end }}
       <section class="post-body">
         {{ .Content }}
       </section>

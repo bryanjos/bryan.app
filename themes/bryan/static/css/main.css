@@ -1,6 +1,7 @@
 :root {
-  --main-dark-bg-color: #111111;
-  --main-dark-color: #7FDBFF;
+  --main-dark-bg-color: #282a36;
+  --main-dark-color: #34B9DB;
+  --main-dark-separator: #6272a4;
 
   --main-light-bg-color: #FFFFFF;
   --main-light-color: #001F3F;
@@ -31,6 +32,10 @@ body,
 a {
   background-color: var(--main-dark-bg-color);
   color: var(--main-dark-color);
+}
+
+hr {
+  color: var(--main-dark-separator);
 }
 
 h1 {
@@ -91,7 +96,7 @@ header nav a {
 }
 
 .profile img {
-  width: 70%;
+  width: 30%;
   border-radius: 50%;
 }
 
@@ -108,6 +113,11 @@ footer {
 }
 
 .post-list article {
+  margin-bottom: 5rem;
+}
+
+.post-body {
+  margin-top: 5rem;
   margin-bottom: 5rem;
 }
 
