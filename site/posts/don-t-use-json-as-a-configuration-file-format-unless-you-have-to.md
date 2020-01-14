@@ -7,4 +7,4 @@ layout: layouts/main
 
 An article I wrote for [Revelry](https://revelry.co) discussing better configuration formats to use than JSON
 
-https://revelry.co/json-configuration-file-format/
+[You can check out the post here](https://revelry.co/json-configuration-file-format/)

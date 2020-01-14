@@ -7,4 +7,4 @@ layout: layouts/main
 
 An article I wrote for [Revelry](https://revelry.co) showing how to presign AWS S3 uploads
 
-https://revelry.co/upload-amazon-s3/
+[You can check out the post here](https://revelry.co/upload-amazon-s3/)

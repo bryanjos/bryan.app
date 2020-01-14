@@ -1,12 +1,12 @@
 ---
-title: Bryan's Roar
+
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>Bryan.app</title>
     <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/css/app.css">
   </head>
@@ -14,20 +14,19 @@ title: Bryan's Roar
     <div class="container">
       <header>
         <nav>
-          <h5>
+          <h3>
             <a href="/">
-              Bryan's Roar
+              Bryan.app
             </a>
-          </h5>
-          <a href="/about">
-            About
-          </a>
+          </h3>
         </nav>
       </header>
       <main>
         <div></div>
         <div>
-          <h3>{{title}}</h3>
+          {% if title %}
+            <h3>{{title}}</h3>
+          {% endif %}
           {% if date %}
             <time>{{ date | date }}</time>
           {% endif %}
@@ -35,7 +34,11 @@ title: Bryan's Roar
         </div>
         <div></div>
       </main>
-      <footer></footer>
+      <footer>
+        <a href="/about">About</a>
+        <a href="https://twitter.com/bryanjos" target="_blank" rel="noreferrer noopener">Twitter</a>
+        <a href="https://github.com/bryanjos" target="_blank" rel="noreferrer noopener">GitHub</a>
+      </footer>
     <div>
   </body>
 </html>

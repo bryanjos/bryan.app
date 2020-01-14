@@ -82,13 +82,18 @@ small,
   font-size: var(--small);
 }
 
+header {
+  display: flex;
+  justify-content: center;
+}
+
 header > nav {
   display: flex;
   align-items: center;
   align-content: space-between;
 }
 
-header > nav > * {
+header > nav > *:first-child {
   margin-right: var(--normal);
 }
 
@@ -116,5 +121,17 @@ time {
 }
 
 footer {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--small);
+  padding-bottom: var(--small);
+}
+
+footer a {
+  margin-right: var(--large);
+}
+
+footer a:last-child {
+  margin-right: 0;
 }
