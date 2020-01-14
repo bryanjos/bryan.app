@@ -2,7 +2,7 @@
 title: Types of Pattern Matching in Elixir
 date: 2019-07-06
 tags: post
-layout: layouts/main
+layout: layouts/post
 ---
 
 A post I wrote for [revelry labs](https://revelry.co) on the types of pattern matching allowed in Elixir.

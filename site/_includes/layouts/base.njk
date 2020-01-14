@@ -6,30 +6,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bryan.app</title>
+    <title>{{ metadata.title}}{% if title %}|{{title}}{% endif%}</title>
+    <meta name="Description" content="{{ metadata.description }}">
     <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/css/app.css">
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
   </head>
   <body>
     <div class="container">
       <header>
-        <nav>
-          <h3>
-            <a href="/">
-              Bryan.app
-            </a>
-          </h3>
-        </nav>
+        <h3>
+          <a href="/">
+            Bryan.app
+          </a>
+        </h3>
       </header>
       <main>
         <div></div>
         <div>
-          {% if title %}
-            <h3>{{title}}</h3>
-          {% endif %}
-          {% if date %}
-            <time>{{ date | date }}</time>
-          {% endif %}
           {{ content | safe }}
         </div>
         <div></div>

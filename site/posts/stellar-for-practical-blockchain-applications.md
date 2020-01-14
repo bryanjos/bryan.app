@@ -2,7 +2,7 @@
 title: ' Stellar for Practical Blockchain Applications'
 date: 2019-07-06
 tags: post
-layout: layouts/main
+layout: layouts/post
 ---
 
 A post I wrote for [revelry labs](https://revelry.co) about Stellar.

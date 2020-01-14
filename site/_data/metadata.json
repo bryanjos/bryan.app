@@ -1,0 +1,15 @@
+{
+  "title": "Bryan.app",
+  "url": "https://bryan.app/",
+  "description": "My thoughts",
+  "feed": {
+    "subtitle": "My thoughts",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://bryan.app/"
+  },
+  "author": {
+    "name": "Bryan Joseph",
+    "email": "bryanjos@gmail.com"
+  }
+}

@@ -85,16 +85,7 @@ small,
 header {
   display: flex;
   justify-content: center;
-}
-
-header > nav {
-  display: flex;
-  align-items: center;
-  align-content: space-between;
-}
-
-header > nav > *:first-child {
-  margin-right: var(--normal);
+  margin-bottom: var(--xxxxlarge);
 }
 
 main {
@@ -113,13 +104,6 @@ h3 {
   margin-bottom: var(--small);
 }
 
-time {
-  font-size: var(--small);
-  font-style: italic;
-  color: #00cfff;
-  margin-bottom: var(--large);
-}
-
 footer {
   display: flex;
   align-items: center;
@@ -134,4 +118,20 @@ footer a {
 
 footer a:last-child {
   margin-right: 0;
+}
+
+.h-entry h1 {
+  margin-bottom: var(--small);
+}
+
+.h-entry .metadata {
+  font-size: var(--small);
+  font-style: italic;
+  color: #00cfff;
+  margin-bottom: var(--large);
+}
+
+.h-entry .e-content {
+  margin-bottom: var(--xxxxlarge);
+  margin-top: var(--xxxxlarge);
 }
