@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:hugo": "NODE_ENV=production hugo --config config.toml",
-    "build": "npm run build:hugo",
-    "start:hugo": "hugo -w --config config.toml",
-    "start": "npm run start:hugo"
+    "dev": "concurrently \"npm run dev:webpack\" \"npm run dev:site\"",
+    "dev:site": "ELEVENTY_ENV=development eleventy --input site --output ./public --serve",
+    "dev:webpack": "webpack --mode development --watch",
+    "build:site": "eleventy --input site --output public",
+    "build:webpack": "webpack --mode development",
+    "build": "npm run build:webpack && npm run build:site"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,53 @@
   "bugs": {
     "url": "https://github.com/bryanjos/bryan.app/issues"
   },
-  "homepage": "https://github.com/bryanjos/bryan.app#readme"
+  "homepage": "https://github.com/bryanjos/bryan.app#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.0",
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-json-strings": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/plugin-syntax-import-meta": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/register": "^7.7.7",
+    "autoprefixer": "^9.7.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "concurrently": "^5.0.2",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.17.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "imports-loader": "^0.8.0",
+    "lodash": "^4.17.15",
+    "luxon": "^1.21.3",
+    "material-components-web": "^4.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "resolve-url-loader": "^3.1.1",
+    "sass-loader": "^8.0.0",
+    "script-loader": "^0.7.2",
+    "style-dictionary": "2.8.3",
+    "style-loader": "^1.1.2",
+    "tailwindcss": "^1.1.4",
+    "terser-webpack-plugin": "^2.3.1",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 ChromeAndroid versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "last 2 iOS versions"
+  ]
 }

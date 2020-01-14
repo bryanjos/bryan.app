@@ -1,0 +1,41 @@
+---
+title: Bryan's Roar
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/app.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <h5>
+            <a href="/">
+              Bryan's Roar
+            </a>
+          </h5>
+          <a href="/about">
+            About
+          </a>
+        </nav>
+      </header>
+      <main>
+        <div></div>
+        <div>
+          <h3>{{title}}</h3>
+          {% if date %}
+            <time>{{ date | date }}</time>
+          {% endif %}
+          {{ content | safe }}
+        </div>
+        <div></div>
+      </main>
+      <footer></footer>
+    <div>
+  </body>
+</html>
