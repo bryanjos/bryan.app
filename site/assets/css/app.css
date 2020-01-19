@@ -105,6 +105,18 @@ header>nav *:last-child {
   margin-right: 0;
 }
 
+@media only screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header>nav {
+    justify-content: center;
+  }
+}
+
 main {
   display: grid;
   grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 80ch) minmax(1.2rem,
