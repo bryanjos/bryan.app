@@ -20,10 +20,10 @@ function minimizers() {
 module.exports = {
   devtool: 'source-map',
   entry: {
-    app: ['./assets/css/app.css', './assets/js/app.js'],
+    app: ['./site/assets/css/app.css', './site/assets/js/app.js'],
   },
   output: {
-    path: path.resolve(__dirname, 'public', 'static'),
+    path: path.resolve(__dirname, 'site', 'static'),
     filename: 'js/[name].js',
     chunkFilename: 'js/[name].js',
     publicPath: '/',
@@ -35,8 +35,8 @@ module.exports = {
     // Copy all of our assets to the priv/static folder
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, 'assets', 'static'),
-        to: path.resolve(__dirname, 'public', 'static'),
+        from: path.resolve(__dirname, 'site', 'assets', 'static'),
+        to: path.resolve(__dirname, 'site', 'static'),
       },
     ]),
     new ImageminPlugin({

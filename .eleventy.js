@@ -9,4 +9,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('date', function(value) {
     return DateTime.fromJSDate(value).toLocaleString(DateTime.DATE_FULL)
   })
+
+  eleventyConfig.addPassthroughCopy('site/static')
+  eleventyConfig.setUseGitIgnore(false)
 }

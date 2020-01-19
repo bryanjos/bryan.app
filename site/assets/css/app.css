@@ -84,16 +84,31 @@ small,
 
 header {
   display: flex;
-  justify-content: center;
-  margin-bottom: var(--xxxxlarge);
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: solid #b3efff55 1px;
+}
+
+header>nav {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: left;
+}
+
+header>nav * {
+  margin-right: var(--small);
+}
+
+header>nav *:last-child {
+  margin-right: 0;
 }
 
 main {
   display: grid;
-  grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 80ch) minmax(
-      1.2rem,
-      1fr
-    );
+  grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 80ch) minmax(1.2rem,
+      1fr);
 }
 
 .post-list-item {
@@ -110,6 +125,7 @@ footer {
   justify-content: center;
   padding-top: var(--small);
   padding-bottom: var(--small);
+  border-top: solid #b3efff55 1px;
 }
 
 footer a {
