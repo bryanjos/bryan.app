@@ -25,6 +25,12 @@ html {
   font-family: 'Public Sans', sans-serif;
 }
 
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 80%;
+  }
+}
+
 .container {
   min-height: 100%;
   display: grid;
