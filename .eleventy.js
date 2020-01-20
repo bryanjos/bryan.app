@@ -10,6 +10,14 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(value).toLocaleString(DateTime.DATE_FULL)
   })
 
+  eleventyConfig.addFilter('head', (array, n) => {
+    if (n < 0) {
+      return array.slice(n)
+    }
+
+    return array.slice(0, n)
+  })
+
   eleventyConfig.addPassthroughCopy('site/static')
   eleventyConfig.setUseGitIgnore(false)
 }
