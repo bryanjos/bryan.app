@@ -41,6 +41,7 @@ html {
 p {
   margin-bottom: var(--normal);
   font-size: var(--normal);
+  line-height: 2rem;
 }
 
 a {
@@ -86,6 +87,12 @@ h5 {
 small,
 .text_small {
   font-size: var(--small);
+}
+
+blockquote {
+  font-style: italic;
+  font-size: var(--small);
+  color: #939393;
 }
 
 header {
