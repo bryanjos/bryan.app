@@ -2,7 +2,7 @@
 {%- for post in postslist -%}
   <article class="h-entry">
     <h3 class="p-name"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
-    <p class="metadata">Published by <a class="p-author h-card" href="https://bryan.app">Bryan Joseph</a>
+    <p class="metadata">Published by <a class="p-author" href="https://bryan.app">Bryan Joseph</a>
       on <time class="dt-published" datetime="{{date}}">{{ post.date | date }}</time></p>
   </article>
 {%- endfor -%}

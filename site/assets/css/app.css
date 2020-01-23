@@ -176,3 +176,25 @@ footer a:last-child {
   margin-bottom: var(--xxxxlarge);
   margin-top: var(--xxxxlarge);
 }
+
+.h-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--xxxxlarge);
+  margin-top: var(--xxxxlarge);
+}
+
+.h-card .u-photo {
+  border-radius: 50%;
+  width: 40%;
+}
+
+.h-card .hGroup {
+  text-align: center;
+}
+
+.h-card .p-label {
+  margin-top: -2rem;
+}
