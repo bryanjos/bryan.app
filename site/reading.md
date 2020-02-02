@@ -5,7 +5,7 @@ layout: layouts/home
 
 ## Currently Reading
 
-- Pat Kirwan, David Seigerman, [Take Your Eye Off the Ball 2.0: How to Watch Football by Knowing Where to Look](https://www.amazon.com/gp/product/B015M9SQC2)
+- Laura Klein, Kate Rutter, [Build Better Products: A Modern Approach to Building Successful User-Centered Products](https://www.amazon.com/gp/product/B01M7XFIRB)
 
 ## Recommendations
 
@@ -47,4 +47,8 @@ layout: layouts/home
 
 - Bill Parcells, Nunyo Demasio, [Parcells: A Football Life](https://www.amazon.com/gp/product/B00J1IQW54)
 
+- Pat Kirwan, David Seigerman, [Take Your Eye Off the Ball 2.0: How to Watch Football by Knowing Where to Look](https://www.amazon.com/gp/product/B015M9SQC2)
+
 - Donald A. Norman, [The Design of Everyday Things](https://www.amazon.com/gp/product/B00E257T6C)
+
+- Brian K. Vaughan, Cliff Chiang, [Papger Girls](https://imagecomics.com/comics/series/paper-girls)
