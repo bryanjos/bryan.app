@@ -5,7 +5,7 @@ layout: layouts/home
 
 ## Currently Reading
 
-- Laura Klein, Kate Rutter, [Build Better Products: A Modern Approach to Building Successful User-Centered Products](https://www.amazon.com/gp/product/B01M7XFIRB)
+- Daniel Kahneman, [Thinking, Fast and Slow](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman-ebook/dp/B00555X8OA)
 
 ## Recommendations
 
