@@ -198,3 +198,11 @@ footer a:last-child {
 .h-card .p-label {
   margin-top: -2rem;
 }
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: var(--xlarge);
+}
