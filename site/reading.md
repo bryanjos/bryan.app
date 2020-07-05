@@ -5,10 +5,6 @@ layout: layouts/home
 
 ##### Currently Reading
 
-- [Scaling Up: How a Few Companies Make It...and Why the Rest Don't (Rockefeller Habits 2.0)](https://www.amazon.com/gp/product/B00O5RR7QO)
-  - Verne Harnish
-- [Creating Great Teams: How Self-Selection Lets People Excel](https://www.amazon.com/gp/product/B019EKWG6M)
-  - Sandy Mamoli, David Mole
 - [Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts](https://www.amazon.com/gp/product/B074DG9LQF)
   - Annie Duke
 
@@ -30,6 +26,8 @@ layout: layouts/home
     - Giff Constable
   - [Measure What Matters: How Google, Bono, and the Gates Foundation Rock the World with OKRs](https://www.amazon.com/gp/product/B078FZ9SYB)
     - John Doerr
+  - [Shape Up](https://basecamp.com/shapeup)
+    - Ryan Singer
 
 - #### Management
 
@@ -41,6 +39,8 @@ layout: layouts/home
     - Gojko Adzic, David Evans
   - [Impact Mapping: Making a big impact with software products and projects](https://www.amazon.com/gp/product/B009KWDKVA)
     - Gojko Adzic
+  - [Creating Great Teams: How Self-Selection Lets People Excel](https://www.amazon.com/gp/product/B019EKWG6M)
+    - Sandy Mamoli, David Mole
 
 - #### Comics
 
@@ -102,6 +102,11 @@ layout: layouts/home
 
   - [Messages: The Communication Skills Book](https://www.amazon.com/gp/product/1572245921)
     - Matthew McKay, Martha Davis, Patrick Fanning
+
+- #### Business
+
+  - [Scaling Up: How a Few Companies Make It...and Why the Rest Don't (Rockefeller Habits 2.0)](https://www.amazon.com/gp/product/B00O5RR7QO)
+    - Verne Harnish
 
 - #### Fiction
 
