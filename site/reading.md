@@ -5,8 +5,10 @@ layout: layouts/home
 
 ##### Currently Reading
 
-- [Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts](https://www.amazon.com/gp/product/B074DG9LQF)
-  - Annie Duke
+- [Weekly Coaching Conversation](https://www.amazon.com/dp/B00OBIXKI6)
+  - Brian Souza
+- [Hustle Harder, Hustle Smarter](https://www.amazon.com/dp/B07Z3P8SPM)
+  - 50 Cent
 
 ##### Recommendations
 
@@ -28,6 +30,8 @@ layout: layouts/home
     - John Doerr
   - [Shape Up](https://basecamp.com/shapeup)
     - Ryan Singer
+  - [Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts](https://www.amazon.com/gp/product/B074DG9LQF)
+    - Annie Duke
 
 - #### Management
 
@@ -107,6 +111,8 @@ layout: layouts/home
 
   - [Scaling Up: How a Few Companies Make It...and Why the Rest Don't (Rockefeller Habits 2.0)](https://www.amazon.com/gp/product/B00O5RR7QO)
     - Verne Harnish
+  - [Never Split the Difference: Negotiating As If Your Life Depended On It](https://www.amazon.com/Never-Split-Difference-Negotiating-Depended-ebook/dp/B014DUR7L2)
+    - Chris Voss
 
 - #### Fiction
 
