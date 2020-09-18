@@ -186,6 +186,10 @@ footer a:last-child {
   margin-top: var(--xxxxlarge);
 }
 
+.h-card picture {
+  text-align: center;
+}
+
 .h-card .u-photo {
   border-radius: 50%;
   width: 40%;
